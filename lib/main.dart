@@ -1,5 +1,7 @@
-import 'package:car_app/features/welcome/welcome_screen.dart';
+import 'package:car_app/test/provider/greeting_provider.dart';
+import 'package:car_app/test/screen_one.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const CarApp());
@@ -10,8 +12,11 @@ class CarApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: WelcomeScreen(),
+    return ChangeNotifierProvider(
+      create: (context) => GreetingProvider(),
+      child: const MaterialApp(
+        home: ScreenOne(),
+      ),
     );
   }
 }
