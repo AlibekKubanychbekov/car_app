@@ -8,23 +8,23 @@ class ScreenOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ScreenTwo(),
+          const ScreenTwo(),
           ElevatedButton(
               onPressed: () {
                 context.read<GreetingProvider>().increase();
-                log(context.read<GreetingProvider>().count.toString);
+                (context.read<GreetingProvider>().count.toString());
               },
-              child: Text('+100')),
+              child: const Text('+100')),
           ElevatedButton(
               onPressed: () {
                 context.read<GreetingProvider>().decrease();
-                log(context.read<GreetingProvider>().count.toString);
+                (context.read<GreetingProvider>().count.toString());
               },
-              child: Text('-100')),
+              child: const Text('-100')),
         ],
       ),
     );

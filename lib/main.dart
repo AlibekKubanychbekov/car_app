@@ -1,5 +1,7 @@
+import 'package:car_app/features/cart/cart_provider.dart';
+import 'package:car_app/features/cart/cart_screen.dart';
+import 'package:car_app/features/main/main_screen.dart';
 import 'package:car_app/test/provider/greeting_provider.dart';
-import 'package:car_app/test/screen_one.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,10 +14,17 @@ class CarApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => GreetingProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => GreetingProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => CartProvider(),
+        ),
+      ],
       child: const MaterialApp(
-        home: ScreenOne(),
+        home: MainScreen(),
       ),
     );
   }
