@@ -5,8 +5,6 @@ import 'package:car_app/core/common/model/enum/engine.dart';
 import 'package:car_app/core/common/model/enum/transmission.dart';
 
 class Camry implements CarModel {
-  Camry();
-
   @override
   Brand get brand => Toyota();
 

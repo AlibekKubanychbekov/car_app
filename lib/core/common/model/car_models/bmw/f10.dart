@@ -4,16 +4,7 @@ import 'package:car_app/core/common/model/car_models/car_model.dart';
 import 'package:car_app/core/common/model/enum/engine.dart';
 import 'package:car_app/core/common/model/enum/transmission.dart';
 
-class F10 extends CarModel {
-  F10({
-    required super.brand,
-    required super.modelName,
-    required super.transmission,
-    required super.engine,
-    required super.price,
-    required super.count,
-  });
-
+class F10 implements CarModel {
   @override
   Brand get brand => Bmw();
 

@@ -1,5 +1,4 @@
 import 'package:car_app/features/cart/cart_provider.dart';
-import 'package:car_app/features/cart/cart_screen.dart';
 import 'package:car_app/features/main/main_screen.dart';
 import 'package:car_app/test/provider/greeting_provider.dart';
 import 'package:flutter/material.dart';
